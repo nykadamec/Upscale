@@ -11,7 +11,6 @@ from refiners.foundationals.latent_diffusion import Solver, solvers
 from enhancer import ESRGANUpscaler, ESRGANUpscalerCheckpoints
 
 pillow_heif.register_heif_opener()
-pillow_heif.register_avif_opener()
 
 
 TITLE = """
