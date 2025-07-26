@@ -11,7 +11,11 @@ from refiners.foundationals.latent_diffusion import Solver, solvers
 from enhancer import ESRGANUpscaler, ESRGANUpscalerCheckpoints
 
 pillow_heif.register_heif_opener()
-pillow_heif.register_avif_opener()
+# Note: register_avif_opener() may not be available in all versions
+try:
+    pillow_heif.register_avif_opener()
+except AttributeError:
+    pass  # Fallback for older versions
 
 
 TITLE = """
